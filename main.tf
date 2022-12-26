@@ -33,9 +33,11 @@ resource "aws_instance" "my-ec2-vm" {
     "Name" = "${each.key}"
     "tag" = "${each.key}-${each.value}"    
   }
+}
+
 resource "aws_db_instance" "mysonar" {
   allocated_storage    = 10
-  db_name              = "mydb"
+  security_group_names = [ "openall" ]
   engine               = "mysql"
   engine_version       = "5.7.33"
   instance_class       = "db.t3.micro"
@@ -44,7 +46,5 @@ resource "aws_db_instance" "mysonar" {
   username             = "mysonar"
   password             = "admin123"
   parameter_group_name = "default.mysql5.7"
-  security_group       = ["openall"]
   skip_final_snapshot  = true
-}
 }
