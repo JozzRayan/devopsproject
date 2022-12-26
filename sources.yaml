@@ -1,5 +1,5 @@
 - hosts: 34.200.237.228
-  remote_user: ec2-user
+  remote_user: root
   become: yes
   tasks:
   - name: yum update
