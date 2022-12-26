@@ -18,7 +18,6 @@ provider "aws" {
 resource "aws_instance" "my-ec2-vm" {
   ami               = "ami-079b5e5b3971bd10d"
   instance_type     = "t2.medium"
-  count = 2
   availability_zone = "us-east-1"
   for_each = {
     Sonar  = "instance-1"
