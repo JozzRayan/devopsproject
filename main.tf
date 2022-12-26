@@ -20,7 +20,7 @@ resource "aws_instance" "my-ec2-vm" {
   instance_type     = "t2.medium"
   availability_zone = "us-east-1a"
   key_name          = "key1"
-  security_groups   = "sg-00674356a1b573768"
+  security_groups   = "openall"
   user_data         = <<-EOF
     #!/bin/bash
     sudo yum install python-pip
