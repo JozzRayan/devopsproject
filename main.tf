@@ -16,7 +16,7 @@ provider "aws" {
 
 # Create EC2 Instance
 resource "aws_instance" "my-ec2-vm" {
-  ami               = "ami-079b5e5b3971bd10d"
+  ami               = "ami-0b5eea76982371e91"
   instance_type     = "t2.medium"
   availability_zone = "us-east-1"
   for_each = {
