@@ -19,6 +19,10 @@ resource "aws_instance" "my-ec2-vm" {
   ami               = "ami-0b5eea76982371e91"
   instance_type     = "t2.medium"
   availability_zone = "us-east-1a"
+  user_data         = <<-EOF
+    #!/bin/bash
+    sudo yum install python-pip
+    EOF
   for_each = {
     Sonar  = "instance-1"
     Nexus   = "Instance-2"
