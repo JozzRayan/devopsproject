@@ -37,7 +37,6 @@ resource "aws_instance" "my-ec2-vm" {
 
 resource "aws_db_instance" "mysonar" {
   allocated_storage    = 10
-  security_group_names = [ "openall" ]
   engine               = "mysql"
   engine_version       = "5.7.33"
   instance_class       = "db.t3.micro"
