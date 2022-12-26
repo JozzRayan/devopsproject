@@ -21,7 +21,8 @@
       dest: /opt
       remote_src: yes
       mode: '777'
-  - name: start
+  - name: switch to root user
     shell: sudo su -
+  - name: start
     shell: nohup /opt/nexus-3.44.0-01-unix/bin/./nexus start &
 
