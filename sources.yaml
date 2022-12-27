@@ -1,4 +1,4 @@
-- hosts: 34.200.237.228
+- hosts: 3.237.87.37
   gather_facts: no
   remote_user: ec2-user
   become: yes
