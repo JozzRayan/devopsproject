@@ -16,10 +16,10 @@ provider "aws" {
 
 # Create EC2 Instance
 resource "aws_instance" "my-ec2-vm" {
-  ami               = "ami-0b5eea76982371e91"
+  ami               = "ami-06e46074ae430fba6"
   instance_type     = "t2.medium"
   availability_zone = "us-east-1a"
-  key_name          = "key1"
+  key_name          = "syedafi"
   security_groups   = ["openall"]
   user_data         = <<-EOF
     #!/bin/bash
