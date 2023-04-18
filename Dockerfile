@@ -1,3 +1,3 @@
-FROM tomcat:8
+FROM nginx
 # Take the war and copy to webapps of tomcat
-COPY target/newapp.war /usr/local/tomcat/webapps/
+COPY target/newapp.war /usr/share/nginx/html/
